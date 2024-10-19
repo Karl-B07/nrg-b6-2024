@@ -1,5 +1,5 @@
 import java.util.*;
-public class Numbers{
+public class Task119{
 	public int addNumbers(int a, int b) {
                 return a + b;  
         }
