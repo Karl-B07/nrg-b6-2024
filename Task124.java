@@ -2,7 +2,7 @@ import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class LambdaFilterExample {
+public class Task124 {
     public static void main(String[] args) {
       
         List<Integer> numbers = Arrays.asList(-13, 2, 1, -4, 5, 12, -7, 18, 9, 10);
