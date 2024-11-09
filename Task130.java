@@ -2,9 +2,11 @@ import java.util.*;
 import java.util.Scanner;
 
  public class Task130 {
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input two numbers: ");
+        boolean loop =false;
+        while (!loop) {
         try {
             int a = scanner.nextInt();
             int b = scanner.nextInt();
@@ -17,7 +19,7 @@ import java.util.Scanner;
             int subtract = a - b;
             int multiply = a * b;
             int divide = a / b; 
-
+            
             if (operator.equals("+")) {
                 System.out.println("Result: "+add);
             } else if (operator.equals("*")) {
@@ -28,13 +30,22 @@ import java.util.Scanner;
                 System.out.println("Result: "+divide);
             } else {
                 System.out.println("Error: invalid operator.");
+                System.out.println("");
             }
+            System.out.println("Input two numbers: ");
         } catch (ArithmeticException e) {
             System.out.println("ArithmeticException: Cannot divide by zero.");
-        } catch (Exception e) {
+            System.out.println("");
+            System.out.println("Input two numbers: ");
+            scanner.next();
+        } catch (InputMismatchException e) {
             System.out.println("InputMismatchException: entered a non-integer value.");
-        } finally {
-            scanner.close();
+            System.out.println("");
+            System.out.println("Input two numbers: ");
+            scanner.next();
+        }
         }
     }
 }
+    
+
